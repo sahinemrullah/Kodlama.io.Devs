@@ -1,0 +1,3 @@
+[submodule "submodules/nArchitecture"]
+	path = submodules/nArchitecture
+	url = https://github.com/sahinemrullah/nArchitecture.git
