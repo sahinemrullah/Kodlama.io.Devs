@@ -19,18 +19,12 @@ namespace Application.Features.ProgrammingLanguages.Rules
             _repository = repository;
         }
 
-        public async Task ProgrammingLanguageNameCanNotBeDuplicatedWhenInserted(string name)
-        {
-            ProgrammingLanguage? result = await _repository.GetAsync(b => b.Name == name);
-            if (result != null) throw new BusinessException("Programming language name exists.");
-        }
-
         public static void ProgrammingLanguageShouldExistWhenRequested(ProgrammingLanguage? programmingLanguage)
         {
             if (programmingLanguage == null) throw new BusinessException("Requested programming language does not exist");
         }
 
-        public async Task ProgrammingLanguageNameCanNotBeDuplicatedWhenUpdated(string name)
+        public async Task ProgrammingLanguageNameCanNotBeDuplicated(string name)
         {
             ProgrammingLanguage? result = await _repository.GetAsync(b => b.Name == name);
             if (result != null) throw new BusinessException("Programming language name exists.");

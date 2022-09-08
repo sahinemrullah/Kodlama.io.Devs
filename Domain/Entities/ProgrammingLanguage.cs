@@ -10,10 +10,10 @@ namespace Domain.Entities
     public class ProgrammingLanguage : Entity
     {
         public string Name { get; set; } = null!;
-
+        public virtual IEnumerable<Technology> Technologies { get; set; }
         public ProgrammingLanguage()
         {
-
+            Technologies = new HashSet<Technology>();
         }
 
         public ProgrammingLanguage(int id, string name) : this()

@@ -26,8 +26,8 @@ namespace API.Controllers
         [HttpGet("{Id}")]
         public async Task<IActionResult> GetById([FromRoute] GetByIdProgrammingLanguageQuery getByIdIdProgrammingLanguageQuery)
         {
-            GetByIdProgrammingLanguageDto brandGetByIdDto = await Mediator!.Send(getByIdIdProgrammingLanguageQuery);
-            return Ok(brandGetByIdDto);
+            GetByIdProgrammingLanguageDto getByIdProgrammingLanguageDto = await Mediator!.Send(getByIdIdProgrammingLanguageQuery);
+            return Ok(getByIdProgrammingLanguageDto);
         }
 
         [HttpPost]

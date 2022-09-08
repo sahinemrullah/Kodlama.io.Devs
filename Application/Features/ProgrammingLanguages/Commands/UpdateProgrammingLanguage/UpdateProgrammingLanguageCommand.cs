@@ -35,7 +35,7 @@ namespace Application.Features.ProgrammingLanguages.Commands.UpdateProgrammingLa
                 ProgrammingLanguage? programmingLanguage = await _programmingLanguageRepository.GetAsync(pl => pl.Id == request.Id);
                 ProgrammingLanguageBusinessRules.ProgrammingLanguageShouldExistWhenRequested(programmingLanguage);
 
-                await _programmingLanguageBusinessRules.ProgrammingLanguageNameCanNotBeDuplicatedWhenUpdated(request.Name);
+                await _programmingLanguageBusinessRules.ProgrammingLanguageNameCanNotBeDuplicated(request.Name);
 
                 //https://stackoverflow.com/questions/13314666/using-automapper-to-update-an-existing-entity-poco
                 _mapper.Map(request, programmingLanguage);

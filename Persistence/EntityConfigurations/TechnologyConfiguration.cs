@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Persistence.EntityConfigurations
 {
-    public class ProgrammingLanguageConfiguration : IEntityTypeConfiguration<ProgrammingLanguage>
+    public class TechnologyConfiguration : IEntityTypeConfiguration<Technology>
     {
-        public void Configure(EntityTypeBuilder<ProgrammingLanguage> builder)
+        public void Configure(EntityTypeBuilder<Technology> builder)
         {
             // Diğer tanımlamaları yazım kurallarına uyduğum için yazmıyorum.
             builder.Property(pl => pl.Name)
