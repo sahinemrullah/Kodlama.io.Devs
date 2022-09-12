@@ -19,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Application\Application.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Security\Security.csproj" />
+    <ProjectReference Include="..\submodules\nArchitecture\src\corePackages\Core.Security\Core.Security.csproj" />
   </ItemGroup>
 
 </Project>
